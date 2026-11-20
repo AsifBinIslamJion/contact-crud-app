@@ -21,7 +21,7 @@ class ContactFormPage extends StatelessWidget {
 
       nameController.text = contact.name!;
       professionController.text = contact.profession!;
-      mobileController.text = contact.mobile! as String;
+      mobileController.text = contact.mobile!;
     }
 
     return Scaffold(
@@ -30,7 +30,7 @@ class ContactFormPage extends StatelessWidget {
         child: Column(
           children: [
             Text(
-              'Add your Contact',
+              index == null ? 'Add your Contact' : 'Update your Contact',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 40),
             ),
             TextField(
